@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SmsAppJava</string>
+    <string name="messaggio">scrivi un messaggio</string>
+    <string name="bottone">invia</string>
 </resources>
