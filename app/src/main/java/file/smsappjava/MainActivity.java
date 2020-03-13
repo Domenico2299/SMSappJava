@@ -16,9 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void sendMessage(View view) {
+        EditText number_edittext = (EditText) findViewById(R.id.editText2);
         EditText message_edittext = (EditText) findViewById(R.id.editText);
+        String number=number_edittext.getText().toString();
         String message = message_edittext.getText().toString();
-        Uri uri = Uri.parse("smsto:0800000123");
+        Uri uri = Uri.parse("smsto:"+number);
         Intent it = new Intent(Intent.ACTION_SENDTO, uri);
         it.putExtra("sms_body", message);
         startActivity(it);
