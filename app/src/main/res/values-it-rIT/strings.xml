@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmsAppJava</string>
+    <string name="message">Scrivi un mesaggio</string>
+    <string name="button">Invia</string>
+    <string name="Hello_World_str">Ciao Mondo</string>
+</resources>

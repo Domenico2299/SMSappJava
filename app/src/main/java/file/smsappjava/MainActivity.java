@@ -2,11 +2,11 @@ package file.smsappjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
+        import android.content.Intent;
+        import android.net.Uri;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,13 +16,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void sendMessage(View view) {
-        EditText number_edittext = (EditText) findViewById(R.id.editText2);
-        EditText message_edittext = (EditText) findViewById(R.id.editText);
-        String number=number_edittext.getText().toString();
-        String message = message_edittext.getText().toString();
-        Uri uri = Uri.parse("smsto:"+number);
+        EditText editTextTel = (EditText) findViewById(R.id.editTextTel);
+        EditText editTextMessage = (EditText) findViewById(R.id.editTextMessage);
+        String edittextel=editTextTel.getText().toString();
+        String edittextmessage= editTextMessage.getText().toString();
+        Uri uri = Uri.parse("smsto:"+edittextel);
         Intent it = new Intent(Intent.ACTION_SENDTO, uri);
-        it.putExtra("sms_body", message);
+        it.putExtra("sms_body", +edittextmessage);
         startActivity(it);
     }
 }
