@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         String edittextmessage= editTextMessage.getText().toString();
         Uri uri = Uri.parse("smsto:"+edittextel);
         Intent it = new Intent(Intent.ACTION_SENDTO, uri);
-        it.putExtra("sms_body", +edittextmessage);
+        it.putExtra("sms_body", edittextmessage);
         startActivity(it);
     }
 }
